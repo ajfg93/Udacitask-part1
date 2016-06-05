@@ -3,7 +3,7 @@ require_relative 'todolist.rb'
 # Creates a new todo list
 mylist = TodoList.new("Pengtianqing's daily routine")
 # Add four new items
-4.times.mylist.add_item(gets.chomp)
+4.times {mylist.add_item(gets.chomp)}
 # Print the list
 mylist.print_list
 # Delete the first item

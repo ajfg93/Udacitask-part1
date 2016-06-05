@@ -22,18 +22,21 @@ class TodoList
     end
 
     def completed?(id)
-      @items[id-1].@completed_status
+      @items[id-1].completed_status
     end
 
     def print_list
-      @title.length.times {puts "-"}
+      @title.length.times {print "-"}
+      puts
       puts @title
-      @title.length.times {puts "-"}
+      @title.length.times {print "-"}
+      puts
       counter = 0
       while counter < @items.length
-        puts "#{counter+1} - #{@items[counter]}" + "\t" + "Completed: #{@items[counter].@completed_status}"
+        puts "#{counter+1} - #{@items[counter].description}" + "\t" + "Completed: #{@items[counter].completed_status}"
         counter += 1
       end
+    end
 end
 
 class Item
@@ -45,6 +48,6 @@ class Item
     end
 
     def change_complete_status(true_or_false)
-      @completion = true_or_false
+      @completed_status = true_or_false
     end
 end

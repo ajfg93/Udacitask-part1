@@ -49,7 +49,3 @@
 #     @flavors.delete(removed_flavor)
 #   end
 # end
-$a = []
-def test(*arugment)
-    $a.push(arugment)
-end
